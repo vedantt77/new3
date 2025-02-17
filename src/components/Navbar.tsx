@@ -80,7 +80,7 @@ export function Navbar() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-                  to="https://tally.so/r/mV92zJ"
+                  to="https://tally.so/r/wo5Leb"
                   className="ml-2 px-4 py-2 text-foreground font-medium rounded-lg border border-foreground transition-colors duration-200 hover:bg-accent/80 rainbow-border-button"
                 >
                   + Submit

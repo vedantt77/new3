@@ -8,7 +8,7 @@ export const launches: Launch[] = [
     description: 'Uncover Hidden MicroSaaS Opportunities by analyzing established SaaS pain points and turning them into profitable micro-products',
     launchDate: '2025-02-16',
     website: 'https://microsaasl.ink',
-    category: 'analytics',
+    category: 'business',
     listingType: 'regular',
     doFollowBacklink: true
   },
@@ -221,7 +221,61 @@ export const launches: Launch[] = [
     listingType: 'regular',
     doFollowBacklink: true
   },
-  
+  {
+    id: 'RevenueFlo-21',
+    name: 'RevenueFlo',
+    logo: '/images/RevenueFlo.png',
+    description: 'RevenueFlo helps subscription apps get more paying customers by offering smart discounts at the right time.',
+    launchDate: '2025-02-16',
+    website: 'https://revenueflo.com/',
+    category: 'Business',
+    listingType: 'regular',
+    doFollowBacklink: true
+  },
+  {
+    id: 'Amber-22',
+    name: 'Amber',
+    logo: '/images/Amber.png',
+    description: 'Cursor for Creative Writing',
+    launchDate: '2025-02-16',
+    website: 'withamber.com',
+    category: 'Ai tool',
+    listingType: 'regular',
+    doFollowBacklink: true
+  },
+  {
+    id: 'Indie Launch-23',
+    name: 'Indie Launch',
+    logo: '/images/Indie Launch.jpg',
+    description: 'Convert Visitors into Customers with IndieLaunch Template',
+    launchDate: '2025-02-16',
+    website: 'https://www.getindielaunch.com/',
+    category: 'Business',
+    listingType: 'regular',
+    doFollowBacklink: true
+  },
+  {
+    id: 'AutoContent API-24',
+    name: 'AutoContent API',
+    logo: '/images/AutoContent API.png',
+    description: 'Create NotebookLM podcasts from websites, YouTube videos or PDF documents',
+    launchDate: '2025-02-16',
+    website: 'https://autocontentapi.com/',
+    category: 'API',
+    listingType: 'regular',
+    doFollowBacklink: true
+  },
+  {
+    id: 'StuffToSponsor-25',
+    name: 'StuffToSponsor',
+    logo: '/images/StuffToSponsor.jpg',
+    description: 'Discover Top Sites to Buy Ad Spots',
+    launchDate: '2025-02-16',
+    website: 'StuffToSponsor.com',
+    category: 'Business',
+    listingType: 'regular',
+    doFollowBacklink: true
+  },
 ];
 
 export function getLaunches(): Launch[] {

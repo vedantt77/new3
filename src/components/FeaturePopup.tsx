@@ -61,7 +61,7 @@ export function FeaturePopup() {
               <div className="flex flex-col">
                 <span className="text-base font-semibold">🚀 Get Featured Now</span>
                 <span className="text-sm text-muted-foreground">
-                  Only at <span className="text-green-500 font-bold">$10/week</span>
+                  Only at <span className="text-green-500 font-bold">$5/week</span>
                 </span>
               </div>
             </Link>

@@ -2,6 +2,39 @@ import { Launch } from '../types/launch';
 
 export const launches: Launch[] = [
   
+{
+    id: 'Ashdeck-35',
+    name: 'Ashdeck',
+    logo: '/images/Ashdeck.png',
+    description: 'Ashdeck helps you stay focused by blocking distracting websites, using a Pomodoro timer for structured work sessions, and tracking your progress',
+    launchDate: '2025-02-23',
+    website: 'https://www.ashdeck.com',
+    category: 'productivity',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+{
+    id: 'TheBlue.social-34',
+    name: 'TheBlue.social',
+    logo: '/images/TheBlue.social.png',
+    description: 'Tools for Bluesky',
+    launchDate: '2025-02-23',
+    website: 'https://theblue.social',
+    category: 'directory',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'Uptimebeats-33',
+    name: 'Uptimebeats',
+    logo: '/images/Uptimebeats.png',
+    description: 'Uptime monitoring tools and status pages',
+    launchDate: '2025-02-23',
+    website: 'https://uptimebeats.com',
+    category: 'business',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
    {
     id: 'Openmark-32',
     name: 'Openmark',

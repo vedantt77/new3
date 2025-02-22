@@ -2,7 +2,6 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from '@/components/ui/dialog';
-import { Rocket } from 'lucide-react';
 import { pricingPlans } from '@/lib/data/pricing-plans';
 import { formatPrice } from '@/lib/utils/format-price';
 import { motion } from 'framer-motion';
@@ -72,7 +71,6 @@ export function BoostPricing() {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center">
-                      <Rocket className="w-5 h-5 mr-2 text-primary" />
                       {feature}
                     </li>
                   ))}

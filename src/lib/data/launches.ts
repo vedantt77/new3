@@ -1,7 +1,40 @@
 import { Launch } from '../types/launch';
 
 export const launches: Launch[] = [
-  
+
+   {
+    id: 'BskyInfo-38',
+    name: 'BskyInfo',
+    logo: '/images/BskyInfo.png',
+    description: 'The Most Comprehensive Bluesky Tools Directory',
+    launchDate: '2025-02-23',
+    website: 'https://www.bskyinfo.com/',
+    category: 'directory',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+   {
+    id: 'Socialrails-37',
+    name: 'Socialrails',
+    logo: '/images/socialrails.png',
+    description: 'Schedule to 9 social media platforms in seconds',
+    launchDate: '2025-02-23',
+    website: 'https://socialrails.com/',
+    category: 'productivity',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'Undervalued-36',
+    name: 'Undervalued',
+    logo: '/images/Undervalued.png',
+    description: 'AI that Finds Value (Stock Market)',
+    launchDate: '2025-02-23',
+    website: 'https://undervalued.ai',
+    category: 'Ai tool',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
 {
     id: 'Ashdeck-35',
     name: 'Ashdeck',

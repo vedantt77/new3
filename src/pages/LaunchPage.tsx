@@ -16,6 +16,7 @@ const ROTATION_INTERVAL = 10 * 60 * 1000; // 10 minutes in milliseconds
 export function LaunchPage() {
   const [activeTab, setActiveTab] = useState('weekly');
   const [rotatedWeeklyLaunches, setRotatedWeeklyLaunches] = useState<Launch[]>([]);
+  const [rotatedRegularLaunches, setRotatedRegularLaunches] = useState<Launch[]>([]);
   const [rotatedBoostedLaunches, setRotatedBoostedLaunches] = useState<Launch[]>([]);
   
   // Memoize these values to prevent unnecessary re-renders
@@ -88,9 +89,11 @@ export function LaunchPage() {
   useEffect(() => {
     const updateRotations = () => {
       const weeklyIndex = getCurrentRotationIndex(weeklyRegularLaunches.length);
+      const regularIndex = getCurrentRotationIndex(regularLaunches.length);
       const boostedIndex = getCurrentRotationIndex(boostedLaunches.length);
 
       setRotatedWeeklyLaunches(rotateArrayByIndex(weeklyRegularLaunches, weeklyIndex));
+      setRotatedRegularLaunches(rotateArrayByIndex(regularLaunches, regularIndex));
       setRotatedBoostedLaunches(rotateArrayByIndex(boostedLaunches, boostedIndex));
     };
 
@@ -111,7 +114,7 @@ export function LaunchPage() {
     }, timeUntilNextRotation);
 
     return () => clearTimeout(initialTimeout);
-  }, [weeklyRegularLaunches, boostedLaunches]); // Only depend on the launch arrays
+  }, [weeklyRegularLaunches, regularLaunches, boostedLaunches]); // Include regularLaunches in dependencies
 
   return (
     <div className="min-h-screen">
@@ -154,7 +157,7 @@ export function LaunchPage() {
 
             <TabsContent value="all" className="mt-4 sm:mt-6">
               <div className="space-y-4">
-                {insertBoostedLaunches(regularLaunches, 'all').map((launch) => (
+                {insertBoostedLaunches(rotatedRegularLaunches, 'all').map((launch) => (
                   <LaunchListItem 
                     key={launch.uniqueKey}
                     launch={launch}

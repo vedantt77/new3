@@ -1,7 +1,96 @@
 import { Launch } from '../types/launch';
 
 export const launches: Launch[] = [
+  {
+    id: 'TouchBase-46',
+    name: 'TouchBase',
+    logo: '/images/TouchBase.png',
+    description: 'Stay connected with the people who matter most.',
+    launchDate: '2025-02-23',
+    website: 'https://touchbase.site/',
+    category: 'business',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'Simpler-45',
+    name: 'Simpler ',
+    logo: '/images/Simpler.png',
+    description: 'Web-based workflow editor for creating, managing, and sharing automated workflows with AI integration.',
+    launchDate: '2025-02-23',
+    website: 'https://seeksimpler.com/',
+    category: 'business',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
 
+  {
+    id: 'APIWORX Integration Services-44',
+    name: 'APIWORX Integration Services',
+    logo: '/images/APIWORX.png',
+    description: 'APIWORX is a next-generation Integration as a Service (IaaS) platform that seamlessly connects eCommerce, ERP, and fulfillment systems with AI-driven automation and real-time data synchronization',
+    launchDate: '2025-02-23',
+    website: 'https://apiworx.com/',
+    category: 'business',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'Best Free Tools-43',
+    name: 'Best Free Tools',
+    logo: '/images/Best Free Tools.png',
+    description: 'Best Free Tools',
+    launchDate: '2025-02-23',
+    website: 'https://www.bestfreetools.io/',
+    category: 'directory',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'Dear Coloring Pages-42',
+    name: 'Dear Coloring Pages',
+    logo: '/images/Dear Coloring Pages.png',
+    description: 'Beautiful AI-Generated Coloring Pages for Everyone',
+    launchDate: '2025-02-23',
+    website: 'https://dearcoloringpages.com',
+    category: 'Ai tool',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'Cogniba-41',
+    name: 'Cogniba',
+    logo: '/images/Cogniba.png',
+    description: 'The only form of brain training that works',
+    launchDate: '2025-02-23',
+    website: 'https://www.cogniba.com/',
+    category: 'productivity',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'IndiePitcher-40',
+    name: 'IndiePitcher',
+    logo: '/images/IndiePitcher.png',
+    description: 'Everything email for your startup with markdown support',
+    launchDate: '2025-02-23',
+    website: 'https://indiepitcher.com',
+    category: 'business',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+
+{
+    id: 'everfind-39',
+    name: 'everfind',
+    logo: '/images/everfind.png',
+    description: 'Find information across all your connected apps like Jira, Gmail, Gdrive.',
+    launchDate: '2025-02-23',
+    website: 'https://everfind.ai',
+    category: 'Ai tool',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
    {
     id: 'BskyInfo-38',
     name: 'BskyInfo',

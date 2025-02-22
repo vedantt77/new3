@@ -16,21 +16,21 @@ export interface PricingPlan {
 
 export const pricingPlans: PricingPlan[] = [
   {
-    name: 'Basic Boost', // Edit name
-    price: 5, // Edit price
-    period: 'week', // Change period: 'weekly', 'monthly', or 'annually'
+    name: 'Basic Boost',
+    price: 5,
+    period: 'week',
     badge: { 
-      text: 'Most Popular', // Edit badge text
-      variant: 'default' // Change variant: 'default', 'secondary', or 'outline'
+      text: 'Most Popular',
+      variant: 'default'
     },
-    features: [ // Edit features list
-      'Launch immediately',
-      'Boosted listing for a week',
-      'After boosted listing additional regualr listing for 1 week',
-      'Priority support' // Add more features
+    features: [
+      '- Launch immediately',
+      '- Boosted listing for a week',
+      '- After boosted listing additional regualr listing for 1 week',
+      '- Priority support'
     ],
-    buttonText: 'Get Started', // Edit button text
-    paypalPlanId: 'basic-boost' // PayPal plan ID for payments
+    buttonText: 'Get Started',
+    paypalPlanId: 'basic-boost'
   },
   {
     name: 'Premium Boost',
@@ -41,12 +41,10 @@ export const pricingPlans: PricingPlan[] = [
       variant: 'secondary'
     },
     features: [
-      'Launch immediately',
-      'Premium listing for a week',
-      'After boosted listing additional regualr listing for 1 week',
-      '1x Newsletter mention',
-     
-      
+      '- Launch immediately',
+      '- Premium listing for a week',
+      '- After boosted listing additional regualr listing for 1 week',
+      '- 1x Newsletter mention'
     ],
     highlighted: true,
     buttonText: 'Upgrade to Pro',
@@ -61,11 +59,9 @@ export const pricingPlans: PricingPlan[] = [
       variant: 'outline'
     },
     features: [
-      
-      'Custom promotion plan',
-      'Dedicated support',
-      'Custom integrations',
-    
+      '- Custom promotion plan',
+      '- Dedicated support',
+      '- Custom integrations'
     ],
     buttonText: 'Contact Sales'
   }

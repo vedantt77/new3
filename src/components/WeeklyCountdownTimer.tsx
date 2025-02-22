@@ -20,8 +20,17 @@ export function WeeklyCountdownTimer() {
     const calculateTimeLeft = () => {
       const now = new Date();
       const nextSunday = new Date(now);
-      nextSunday.setDate(now.getDate() + (7 - now.getDay()));
-      nextSunday.setHours(24, 0, 0, 0);
+      
+      // If it's already past Saturday 23:59:59, get next week's Sunday
+      if (now.getDay() === 6 && now.getHours() === 23 && now.getMinutes() === 59 && now.getSeconds() > 58) {
+        nextSunday.setDate(now.getDate() + 1);
+      } else {
+        // Get the most recent Sunday (or next Sunday if it's Saturday night)
+        nextSunday.setDate(now.getDate() - now.getDay() + 7);
+      }
+      
+      // Set to midnight (00:00:00)
+      nextSunday.setHours(0, 0, 0, 0);
       
       const difference = nextSunday.getTime() - now.getTime();
       

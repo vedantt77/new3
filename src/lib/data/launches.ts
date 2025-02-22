@@ -1,6 +1,84 @@
 import { Launch } from '../types/launch';
 
 export const launches: Launch[] = [
+  
+   {
+    id: 'Openmark-32',
+    name: 'Openmark',
+    logo: '/images/Openmark.png',
+    description: 'Brand your vision with free, professional, open-source logos hand-crafted for todays product creators.',
+    launchDate: '2025-02-23',
+    website: 'https://www.openmark.co/',
+    category: 'business',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'Component Libraries-31',
+    name: 'Component Libraries',
+    logo: '/images/Component Libraries.png',
+    description: 'The only platform for the best component libraries across all frameworks',
+    launchDate: '2025-02-23',
+    website: 'https://componentlibraries.com',
+    category: 'business',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+{
+    id: 'DomoAI-30',
+    name: 'DomoAI',
+    logo: '/images/DomoAI.png',
+    description: 'AI video editor that converts videos, text, and images into animation. Make your character move as you want.',
+    launchDate: '2025-02-23',
+    website: 'https://domoai.app/',
+    category: 'Ai tool',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+   {
+    id: 'aijobflow-29',
+    name: 'Aijobflow',
+    logo: '/images/aijobflow.jpg',
+    description: 'Find Your Next Career-Defining Opportunities. Smart matching and AI tools to make your journey problem free.',
+    launchDate: '2025-02-23',
+    website: 'https://www.aijobflow.com',
+    category: 'Ai tool',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+ {
+    id: 'Xply-28',
+    name: 'Xply',
+    logo: '/images/Xply.png',
+    description: 'Xply helps you dominate your niche on X by finding high-value posts to engage with',
+    launchDate: '2025-02-23',
+    website: 'https://www.xply.app',
+    category: 'Ai tool',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'Narkis.ai-27',
+    name: 'Narkis.ai',
+    logo: '/images/Narkis.jpeg',
+    description: 'Narkis.ai: Your AI Photo Studio.',
+    launchDate: '2025-02-23',
+    website: 'https://narkis.ai/',
+    category: 'Ai tool',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
+  {
+    id: 'Mapsemble-26',
+    name: 'Mapsemble',
+    logo: '/images/Mapsemble.png',
+    description: 'Build and embed interactive maps based with your own dataset, using XLS, CSV, Geojson or API.',
+    launchDate: '2025-02-23',
+    website: 'https://Mapsemble.com',
+    category: 'business',
+    listingType: 'regular',
+    doFollowBacklink: false
+  },
    {
     id: 'Microsaaslink-1',
     name: 'Microsaaslink',

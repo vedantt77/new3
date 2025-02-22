@@ -159,7 +159,7 @@ export const launches: Launch[] = [
     id: 'MX Suite-15',
     name: 'MX Suite',
     logo: '/images/MX Suite.png',
-    description: 'MX Suite isn’t just another warming service—it’s an all-in-one email platform. ',
+    description: 'MX Suite isnt just another warming service—its an all-in-one email platform. ',
     launchDate: '2025-02-16',
     website: 'https://mxsuite.co',
     category: 'business',
@@ -283,28 +283,21 @@ export function getLaunches(): Launch[] {
 }
 
 export function getWeeklyLaunches(): Launch[] {
-  // Get current date in IST
+  // Get current date
   const now = new Date();
-  const istOffset = 0 * 60 * 60 * 1000; // IST is UTC+5:30
-  const istNow = new Date(now.getTime() + istOffset);
   
-  // Find the start of the current week (Sunday) in IST
-  const startOfWeek = new Date(istNow);
-  startOfWeek.setDate(istNow.getDate() - istNow.getDay()); // Go back to Sunday
+  // Find the start of the current week (Sunday at 00:00:00)
+  const startOfWeek = new Date(now);
+  startOfWeek.setDate(now.getDate() - now.getDay()); // Go back to Sunday
   startOfWeek.setHours(0, 0, 0, 0);
   
-  // Find the end of the week (Saturday) in IST
+  // Find the end of the week (Saturday at 23:59:59)
   const endOfWeek = new Date(startOfWeek);
   endOfWeek.setDate(startOfWeek.getDate() + 6); // Go to Saturday
   endOfWeek.setHours(23, 59, 59, 999);
   
-  // Convert back to UTC for comparison
-  const startOfWeekUTC = new Date(startOfWeek.getTime() - istOffset);
-  const endOfWeekUTC = new Date(endOfWeek.getTime() - istOffset);
-  
   return launches.filter(launch => {
     const launchDate = new Date(launch.launchDate);
-    return launchDate >= startOfWeekUTC && launchDate <= endOfWeekUTC;
+    return launchDate >= startOfWeek && launchDate <= endOfWeek;
   });
 }
-

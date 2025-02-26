@@ -17,8 +17,8 @@ export function FeaturePopup() {
         confetti({
           particleCount: 100,
           spread: 70,
-          origin: { x: 0.9, y: 0.9 }, // Start from bottom right
-          colors: ['#22c55e', '#3b82f6', '#6366f1'], // Green, blue, indigo
+          origin: { x: 0.9, y: 0.9 },
+          colors: ['#22c55e', '#3b82f6', '#6366f1'],
           ticks: 200,
           gravity: 0.8,
           scalar: 0.9,
@@ -42,7 +42,7 @@ export function FeaturePopup() {
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 50, scale: 0.9 }}
-          transition={{ 
+          transition={{
             type: "spring",
             stiffness: 400,
             damping: 25
@@ -50,18 +50,19 @@ export function FeaturePopup() {
           className="fixed bottom-4 right-4 z-50"
         >
           <motion.div 
-            className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 backdrop-blur-md border-2 border-primary/20 shadow-lg rounded-lg p-6 relative"
+            className="bg-background border-2 border-primary/20 shadow-[0_0_15px_5px_rgba(0,0,0,0.1)] rounded-lg p-6 relative overflow-hidden"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
+            <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-blue-500/10 to-green-500/10 animate-[gradient_3s_ease-in-out_infinite] opacity-50" />
             <Link
               to="/boost"
-              className="flex items-center gap-3"
+              className="relative z-10 flex items-center gap-3"
             >
               <div className="flex flex-col">
                 <span className="text-base font-semibold">🚀 Get Featured Now</span>
                 <span className="text-sm text-muted-foreground">
-                  Only at <span className="text-green-500 font-bold">$5/week</span>
+                  Onlt at <span className="text-green-500 font-bold">$5/week</span>
                 </span>
               </div>
             </Link>
@@ -70,7 +71,7 @@ export function FeaturePopup() {
                 e.preventDefault();
                 setIsDismissed(true);
               }}
-              className="absolute top-2 right-2 p-1 hover:bg-accent/50 rounded-full transition-colors"
+              className="absolute right-2 top-2 p-1 hover:bg-accent/50 rounded-full transition-colors"
               aria-label="Close"
             >
               <X className="h-4 w-4 text-muted-foreground" />

@@ -1,15 +1,25 @@
-import { Launch } from '@/lib/types/launch';
+import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ExternalLink, Share2 } from 'lucide-react';
+import { Launch } from '@/lib/types/launch';
+import { shareUrl } from '@/lib/utils/share';
 
 interface PremiumListingProps {
   launch: Launch;
 }
 
 export function PremiumListing({ launch }: PremiumListingProps) {
+  const handleShare = async () => {
+    const shareData = {
+      title: `Check out ${launch.name} on startups.ad`,
+      text: launch.description,
+      url: `https://startups.ad/launch/${launch.id}`
+    };
+    await shareUrl(shareData);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -58,23 +68,33 @@ export function PremiumListing({ launch }: PremiumListingProps) {
             </div>
             <p className="text-muted-foreground text-sm sm:text-base">{launch.description}</p>
           </div>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <div className="flex gap-2 w-full sm:w-auto">
             <Button 
-              size="lg" 
-              className="w-full sm:w-auto mt-4 sm:mt-0 bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800 text-white" 
-              asChild
+              size="sm" 
+              variant="outline"
+              className="flex-1 sm:flex-none"
+              onClick={handleShare}
             >
-              <a 
-                href={launch.website} 
-                target="_blank"
-              >
-                Visit <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
+              <Share2 className="h-4 w-4" />
             </Button>
-          </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button 
+                size="lg" 
+                className="w-full sm:w-auto mt-4 sm:mt-0 bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800 text-white" 
+                asChild
+              >
+                <a 
+                  href={launch.website} 
+                  target="_blank"
+                >
+                  Visit <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </Card>
     </motion.div>

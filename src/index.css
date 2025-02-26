@@ -77,6 +77,18 @@
   animation: shine 1.5s ease-in-out infinite;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* PayPal Button Container Styles */
 .paypal-button-container {
   margin-top: 1rem;
